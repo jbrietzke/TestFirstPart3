@@ -80,7 +80,7 @@ describe("Cat class", function() {
   // to perform different actions (polymorphism).
   it("should have it's own haveBaby method that takes only a color", function() {
     var greenCat = cat.haveBaby("green");
-    expect(cat.offspring).toEqual([green_cat]);
+    expect(cat.offspring).toEqual([greenCat]);
     expect(greenCat.name).toEqual("Baby Garfield");
     expect(greenCat.color).toEqual("green");
 
