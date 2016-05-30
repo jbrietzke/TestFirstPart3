@@ -16,9 +16,10 @@ Mammal.prototype.haveBaby = function(){
 function Cat(name, color){
 	Mammal.call(this, name);
 	this.color = color;
-	Cat.prototype = Object.create(Mammal.prototype);
-	Cat.prototype.constructor = Cat;
 }
+
+Cat.prototype = Object.create(Mammal.prototype);
+Cat.prototype.constructor = Cat;
 
 Cat.prototype.haveBaby = function(color){
 	var name = "Baby Garfield";
@@ -26,7 +27,4 @@ Cat.prototype.haveBaby = function(color){
 	this.offspring.push(baby);
 	return baby;
 }
-
-// I can not figure out how to make the Cat.Prototype.haveBaby call
-// I don't know how to give it precendence
 
